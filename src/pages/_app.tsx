@@ -1,15 +1,36 @@
+import { SessionProvider } from "next-auth/react";
+import { withTRPC } from "@trpc/next";
+import superjson from "superjson";
+import type { AppRouter } from "../server/trpc/router";
+import { httpBatchLink } from "@trpc/client";
 import { AppProps } from "next/app";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { trpc } from "../utils/trpc";
+import { Session } from "next-auth";
+import "../styles/styles.css";
 
-const queryClient = new QueryClient();
-
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps<{ session: Session }>) {
   return (
-    <QueryClientProvider client={queryClient}>
+    <SessionProvider session={session}>
       <Component {...pageProps} />
-    </QueryClientProvider>
+    </SessionProvider>
   );
 }
 
-export default trpc.withTRPC(MyApp);
+export default withTRPC<AppRouter>({
+  config() {
+    const url =
+      process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/trpc";
+
+    return {
+      links: [
+        httpBatchLink({
+          url,
+        }),
+      ],
+      transformer: superjson,
+    };
+  },
+  ssr: false,
+})(MyApp);

@@ -1,0 +1,302 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background: radial-gradient(50% 50% at 50% 50%, #e4feff 0%, #f5f6f7 100%);
+}
+
+.mainTitle {
+  text-align: center;
+  color: #73c2c5 !important;
+  background: radial-gradient(50% 50% at 50% 50%, #e4feff 0%, #f5f6f7 100%);
+  padding: 20px;
+  margin-left: 650px;
+  margin-right: 650px;
+  border-radius: 8px;
+  animation: fadeIn 2s ease-out;
+}
+
+.text-center {
+  text-align: center;
+  color: blue !important;
+}
+
+.logoutWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.editUserWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.editUserTitle {
+  color: #579698;
+}
+
+.welcomeMessage {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #73c2c5;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.welcomeMessage:hover {
+  color: #73c2c5;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc;
+  padding: 0 20px;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  color: #73c2c5 !important;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login-form .ant-form-item {
+  margin-bottom: 15px;
+}
+
+.ant-input,
+.ant-input-password {
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #dcdfe6;
+  width: 100%;
+}
+
+.ant-input::placeholder,
+.ant-input-password::placeholder {
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+.ant-btn-primary {
+  background-color: #73c2c5;
+  border-color: #539193;
+  color: white;
+  font-size: 16px;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.ant-btn-primary:hover {
+  background-color: #73c2c5;
+  border-color: #73c2c5;
+}
+
+/* Notifications */
+.ant-notification-notice-error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.ant-notification-notice-error .ant-notification-message {
+  color: #721c24;
+}
+.createNewUser {
+  width: auto;
+  padding: 6px 16px;
+  font-size: 14px;
+  text-align: left;
+  display: inline-block;
+  margin: 10px 0;
+  margin-left: 472px;
+}
+
+.addNewUserForm .ant-btn-primary {
+  background-color: #73c2c5;
+  border-color: #60a4a7;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.addNewUserForm .ant-btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.addNewUserForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 150px auto;
+}
+
+.addNewUserForm .form-table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.addNewUserForm .form-table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.addNewUserForm .form-table td input,
+.addNewUserForm .form-table td .ant-radio-group {
+  width: 100%;
+  max-width: 400px;
+}
+.editUserTitle {
+  color: #64abae;
+}
+
+.editUserWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.editUserWrapper .form-table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.editUserWrapper .form-table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.editUserWrapper .form-table td input,
+.editUserWrapper .form-table td .ant-radio-group {
+  width: 100%;
+  max-width: 400px;
+}
+
+.editUserWrapper .ant-btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.editUserWrapper .ant-btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.submit-btn {
+  width: 80px;
+}
+
+.cancel-btn {
+  width: auto;
+  margin-right: 8px;
+}
+
+.usersTable {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.admin-dashboard-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.admin-dashboard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e6f7ff;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.admin-icon {
+  font-size: 1.2rem;
+  color: #64abae;
+}
+
+.dashboard-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #64abae;
+}
+
+.logout-icon {
+  font-size: 1.5rem;
+  color: #64abae;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.logout-icon:hover {
+  color: #498183;
+}
+.logoutWrapper svg {
+  margin-top: 15px;
+  margin-right: 5px;
+}
